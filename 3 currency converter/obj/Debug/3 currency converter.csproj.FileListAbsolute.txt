@@ -1,0 +1,8 @@
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\bin\Debug\3 currency converter.exe.config
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\bin\Debug\3 currency converter.exe
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\bin\Debug\3 currency converter.pdb
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\obj\Debug\3 currency converter.csproj.AssemblyReference.cache
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\obj\Debug\3 currency converter.csproj.SuggestedBindingRedirects.cache
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\obj\Debug\3 currency converter.csproj.CoreCompileInputs.cache
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\obj\Debug\3 currency converter.exe
+C:\Users\Danii\source\repos\3 currency converter\3 currency converter\obj\Debug\3 currency converter.pdb
