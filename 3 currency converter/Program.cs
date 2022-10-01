@@ -18,14 +18,7 @@ namespace _3_currency_converter
             float currencyYrate = 1.2f;
             float currencyZrate = 134.52f;
             float currencyCount;
-            const string CommandXToY = "1";
-            const string CommandXToZ = "2";
-            const string CommandYToX = "3";
-            const string CommandYToZ = "4";
-            const string CommandZToX = "5";
-            const string CommandZToY = "6";
-            const string CommandExit = "7";
-            const string CommandNoMoney = "Недостаточно средств";
+            float currencyPrice;
 
             Console.WriteLine("Приветствуем в конвертере валют!");
             Console.WriteLine("Какое количество валюты 'X' у вас есть?");
@@ -38,6 +31,15 @@ namespace _3_currency_converter
             
             while(isOpen == true)
             {
+                const string CommandXToY = "1";
+                const string CommandXToZ = "2";
+                const string CommandYToX = "3";
+                const string CommandYToZ = "4";
+                const string CommandZToX = "5";
+                const string CommandZToY = "6";
+                const string CommandExit = "7";
+                const string CommandNoMoney = "Недостаточно средств";
+
                 Console.SetCursorPosition(0, 20);
                 Console.WriteLine("Ваш баланс\n\nВалюта X: " + currencyX + "\nВалюта Y: " + currencyY + "\nВалюта Z: " + currencyZ);
                 Console.WriteLine("\nКурс конвертера\n\n" + currencyXrate + " валюта X = " + currencyYrate + " валюта Y = " + currencyZrate + " валюта Z");
@@ -48,7 +50,9 @@ namespace _3_currency_converter
                     case CommandXToY:
                         Console.WriteLine("сколько валюты Y вам нужно?");
                         currencyCount = Convert.ToSingle(Console.ReadLine());
-                        if(currencyX >= currencyCount * (currencyXrate / currencyYrate))
+                        currencyPrice = currencyCount * (currencyXrate / currencyYrate);
+
+                        if (currencyX >= currencyPrice)
                         {
                             currencyX -= currencyCount * (currencyXrate / currencyYrate);
                             currencyY += currencyCount;
@@ -58,11 +62,14 @@ namespace _3_currency_converter
                             Console.WriteLine(CommandNoMoney);
                             Console.ReadKey();
                         }
+
                         break;
                     case CommandXToZ:
                         Console.WriteLine("сколько валюты Z вам нужно?");
                         currencyCount = Convert.ToSingle(Console.ReadLine());
-                        if(currencyX >= currencyCount * (currencyXrate / currencyZrate))
+                        currencyPrice = currencyCount * (currencyXrate / currencyZrate);
+
+                        if (currencyX >= currencyPrice)
                         {
                             currencyX -= currencyCount * (currencyXrate / currencyZrate);
                             currencyZ += currencyCount;
@@ -72,11 +79,14 @@ namespace _3_currency_converter
                             Console.WriteLine(CommandNoMoney);
                             Console.ReadKey();
                         }
+
                         break;
                     case CommandYToX:
                         Console.WriteLine("сколько валюты X вам нужно?");
                         currencyCount = Convert.ToSingle(Console.ReadLine());
-                        if(currencyY >= currencyCount * (currencyYrate / currencyXrate))
+                        currencyPrice = currencyCount * (currencyYrate / currencyXrate);
+
+                        if (currencyY >= currencyPrice)
                         {
                             currencyY -= currencyCount * (currencyYrate / currencyXrate);
                             currencyX += currencyCount;
@@ -86,11 +96,14 @@ namespace _3_currency_converter
                             Console.WriteLine(CommandNoMoney);
                             Console.ReadKey();
                         }
+
                         break;
                     case CommandYToZ:
                         Console.WriteLine("сколько валюты Z вам нужно?");
                         currencyCount = Convert.ToSingle(Console.ReadLine());
-                        if(currencyY >= currencyCount * (currencyYrate / currencyZrate))
+                        currencyPrice = currencyCount * (currencyYrate / currencyZrate);
+
+                        if (currencyY >= currencyPrice)
                         {
                             currencyY -= currencyCount * (currencyYrate / currencyZrate);
                             currencyZ += currencyCount;
@@ -100,11 +113,14 @@ namespace _3_currency_converter
                             Console.WriteLine(CommandNoMoney);
                             Console.ReadKey();
                         }
+
                         break;
                     case CommandZToX:
                         Console.WriteLine("сколько валюты X вам нужно?");
                         currencyCount = Convert.ToSingle(Console.ReadLine());
-                        if(currencyZ >= currencyCount * (currencyZrate / currencyXrate))
+                        currencyPrice = currencyCount * (currencyZrate / currencyXrate);
+
+                        if (currencyZ >= currencyPrice)
                         {
                             currencyZ -= currencyCount * (currencyZrate / currencyXrate);
                             currencyX += currencyCount;
@@ -114,11 +130,14 @@ namespace _3_currency_converter
                             Console.WriteLine(CommandNoMoney);
                             Console.ReadKey();
                         }
+
                         break;
                     case CommandZToY:
                         Console.WriteLine("сколько валюты Y вам нужно?");
                         currencyCount = Convert.ToSingle(Console.ReadLine());
-                        if(currencyZ >= currencyCount * (currencyZrate / currencyYrate))
+                        currencyPrice = currencyCount * (currencyZrate / currencyYrate);
+
+                        if (currencyZ >= currencyPrice)
                         {
                             currencyZ -= currencyCount * (currencyZrate / currencyYrate);
                             currencyY += currencyCount;
@@ -128,6 +147,7 @@ namespace _3_currency_converter
                             Console.WriteLine(CommandNoMoney);
                             Console.ReadKey();
                         }
+                            
                         break;
                     case CommandExit:
                         isOpen = false;
