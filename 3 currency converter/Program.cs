@@ -45,6 +45,7 @@ namespace _3_currency_converter
                 Console.WriteLine("\nКурс конвертера\n\n" + currencyXrate + " валюта X = " + currencyYrate + " валюта Y = " + currencyZrate + " валюта Z");
                 Console.SetCursorPosition(0, 0);
                 Console.Write("Конвертер валют\n\n" + CommandXToY + ".Обмен валюты X на Y\n" + CommandXToZ + ".Обмен валюты X на Z\n" + CommandYToX + ".Обмен валюты Y на X\n" + CommandYToZ + ".Обмен валюты Y на Z\n" + CommandZToX + ".Обмен валюты Z на X\n" + CommandZToY + ".Обмен валюты Z на Y\n" + CommandExit +".Выход из системы\n\nВведите номер команды: ");
+
                 switch (Console.ReadLine())
                 {
                     case CommandXToY:
